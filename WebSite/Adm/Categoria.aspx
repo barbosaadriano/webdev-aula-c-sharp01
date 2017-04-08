@@ -19,10 +19,13 @@
                     <div class="row">
 
                         <div class="col-lg-6">
-                            <asp:GridView CssClass="table-bordered table table-striped" ID="grdCategoria" runat="server" AutoGenerateColumns="False" DataKeyNames="cat_id" DataSourceID="dsCategoria">
+                            <asp:GridView CssClass="table-bordered table table-striped" ID="grdCategoria" runat="server"
+                                 AutoGenerateColumns="False" DataKeyNames="cat_id" DataSourceID="dsCategoria"
+                                OnSelectedIndexChanged="grdCategoria_SelectedIndexChanged" AllowSorting="true">
                                 <Columns>
                                     <asp:BoundField DataField="cat_id" HeaderText="ID" InsertVisible="False" ReadOnly="True" SortExpression="cat_id" />
                                     <asp:BoundField DataField="cat_nome" HeaderText="Nome da Categoria" SortExpression="cat_nome" />
+                                    <asp:CommandField HeaderText="Selecionar" SelectText="Selecionar" ButtonType="Button" ControlStyle-CssClass="btn btn-info" ShowSelectButton="true"/>
                                 </Columns>
                             </asp:GridView>
                             <asp:ObjectDataSource ID="dsCategoria" runat="server" OldValuesParameterFormatString="original_{0}" SelectMethod="GetData"

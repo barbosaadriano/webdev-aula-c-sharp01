@@ -4,3 +4,6 @@
 <asp:Button ID="btAlterar" CssClass="btn btn-info" runat="server" Text="Alterar" />
 <asp:Button ID="btCancelar" CssClass="btn btn-warning" runat="server" Text="Cancelar" />
 <asp:Button ID="btExcluir" CssClass="btn btn-danger" runat="server" Text="Excluir" OnClientClick="return confirm('Deseja realmente excluir este registro?');"/>
+<asp:Panel runat="server" ID="viewModal">
+
+</asp:Panel>
