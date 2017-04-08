@@ -38,7 +38,6 @@ public class Categoria
         }
     }
     #endregion
-
     #region Manipulação dados
     public string inserir(string cat_nome)
     {
