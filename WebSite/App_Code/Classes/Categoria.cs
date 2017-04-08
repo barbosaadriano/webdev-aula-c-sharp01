@@ -21,11 +21,12 @@ public class Categoria
     }
 
     #endregion
-    
+    #region Construtores
     public Categoria()
 	{
 		//
 		// TODO: Add constructor logic here
 		//
-	}
+    }
+    #endregion
 }

@@ -1,2 +1,6 @@
-SitesNoticias.mdf
-SitesNoticias_log.ldf
+SiteNoticias.mdf
+SiteNoticias_log.ldf
+./SiteNoticias.mdf
+./SiteNoticias_log.ldf
+*.mdf
+*.ldf
