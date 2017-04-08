@@ -62,29 +62,24 @@ public class Usuario
     }
     #endregion
     #region Manipulação dados
-    public string inserir(string usu_nome,string usu_login, string usu_senha, bool usu_ativo)
-    {
-        string retorno = validar(usu_nome,usu_login, usu_senha);
-        if (!String.IsNullOrEmpty(retorno))
-            return retorno;
-        try
-        {
-            this.dsUsuario.Insert(usu_nome,usu_login,usu_senha,usu_ativo);
-        }
-        catch (Exception e)
-        {
-            return "Erro ao inserir o usuario: " + e.Message;
-        }
-        return "";
-    }
-    public string editar(int usu_id, string usu_nome, string usu_login, string usu_senha, bool usu_ativo)
+    public string salvar(int usu_id, string usu_nome, string usu_login, string usu_senha, bool usu_ativo)
     {
         string retorno = validar(usu_nome, usu_login, usu_senha);
         if (!String.IsNullOrEmpty(retorno))
             return retorno;
         try
         {
-            this.dsUsuario.Update(usu_nome,usu_login, usu_senha, usu_ativo, usu_id);
+            if (usu_id > 0)
+            {
+                if (usu_senha.Equals("123"))
+                    this.dsUsuario.UpdateQuery(usu_nome, usu_login, usu_ativo, usu_id);
+                else
+                    this.dsUsuario.Update(usu_nome, usu_login, usu_senha, usu_ativo, usu_id);
+            }
+            else
+            {
+                this.dsUsuario.Insert(usu_nome, usu_login, usu_senha, usu_ativo);
+            }
         }
         catch (Exception e)
         {
