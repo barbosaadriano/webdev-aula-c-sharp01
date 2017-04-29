@@ -22,8 +22,31 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div class="container-fluid">
-            <asp:ScriptManager ID="ScriptManager1" runat="server" />
+    <asp:ScriptManager ID="ScriptManager1" runat="server" />
+     <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+            <asp:HyperLink ID="linkInicio" CssClass="navbar-brand" runat="server" Text="Programação WEB C#" NavigateUrl="~/Adm/Default.aspx"/>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+             <li><asp:HyperLink ID="linkCategoria" runat="server" Text="Categoria"  NavigateUrl="~/Adm/Categoria.aspx"/></li>
+              <li><asp:HyperLink ID="linkNoticia" runat="server" Text="Notícia"  NavigateUrl="~/Adm/Noticia.aspx"/></li>
+              <li><asp:HyperLink ID="linkUsuario" runat="server" Text="Usuário"  NavigateUrl="~/Adm/Usuario.aspx"/></li>
+              <li><asp:HyperLink ID="btnSair" runat="server" Text="Sair" /></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+        <br />
+        <br />
+        <div class="container">           
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>

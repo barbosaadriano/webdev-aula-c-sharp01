@@ -102,7 +102,7 @@ public class Usuario
     private string validar(string usu_nome, string usu_login, string usu_senha)
     {
         if (String.IsNullOrEmpty(usu_nome))
-            return "O Nome do usuário é obrigatório!";   
+            return "O Nome do usuário é obrigatório!";
         if (String.IsNullOrEmpty(usu_login))
             return "O login do usuário é obrigatório!";
         if (String.IsNullOrEmpty(usu_senha))
