@@ -11,6 +11,9 @@ public partial class Adm_Usuario : System.Web.UI.Page
     {
         if(!IsPostBack)
             multiViewUsuario.ActiveViewIndex = 0;
+        
     }
+    
+    
     
 }

@@ -5,7 +5,7 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <ContentTemplate>
-        <h1>Usuario
+        <h1>Usuário
         </h1>
         <p>
             <asp:Button ID="btnListagem" runat="server" Text="Listagem" CssClass="btn-default btn" />
@@ -17,20 +17,23 @@
                     <div class="col-lg-12">
                         <asp:Panel ID="pnlBusca" runat="server" DefaultButton="btnBuscar">
                             <div class="row">
-                            <div class="col-lg-9"><label>Buscar:</label> 
+                            <div class="col-lg-1"><h4>Buscar:</h4></div>
+                            <div class="col-lg-9"> 
                                 <asp:TextBox ID="edtBusca" CssClass="form-control" runat="server"/>
                             </div>
-                            <div class="col-lg-3">
-                                <br />
-                                <asp:Button ID="btnBuscar" runat="server" CssClass="btn btn-info"  Text="Buscar" />
+                            <div class="col-lg-2">
+                                <asp:LinkButton ID="btnBuscar" runat="server" CssClass="btn btn-info btn-block"  Text="Buscar">
+                                    <i class="glyphicon glyphicon-search"></i>&nbsp;Buscar
+                                </asp:LinkButton>
                              </div>
                            </div>
                         </asp:Panel>
                     </div>
                 </div>
                 <div class="row">
+                      <h2>Listagem</h2>
                     <div class="col-lg-12">
-                        <asp:GridView ID="grdUsuario" runat="server" AutoGenerateColumns="False" DataKeyNames="usu_id" AllowSorting="true" DataSourceID="DsUsuario">
+                        <asp:GridView ID="grdUsuario" CssClass="table-bordered table table-striped" runat="server" AutoGenerateColumns="False" DataKeyNames="usu_id" AllowSorting="true" DataSourceID="DsUsuario">
                             <Columns>
                                 <asp:BoundField DataField="usu_id" HeaderText="ID" InsertVisible="False" ReadOnly="True" SortExpression="usu_id" />
                                 <asp:BoundField DataField="usu_nome" HeaderText="Nome" SortExpression="usu_nome" />

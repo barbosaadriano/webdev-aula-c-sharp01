@@ -11,7 +11,7 @@ public class ControleLogin
 
     }
 
-    private bool buscarUsuario(String usuario, String senha)
+    public bool logar(String usuario, String senha)
     {
         if ((string.IsNullOrEmpty(usuario))||(string.IsNullOrEmpty(senha)))
             return false;

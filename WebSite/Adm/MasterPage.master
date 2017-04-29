@@ -39,7 +39,7 @@
              <li><asp:HyperLink ID="linkCategoria" runat="server" Text="Categoria"  NavigateUrl="~/Adm/Categoria.aspx"/></li>
               <li><asp:HyperLink ID="linkNoticia" runat="server" Text="Notícia"  NavigateUrl="~/Adm/Noticia.aspx"/></li>
               <li><asp:HyperLink ID="linkUsuario" runat="server" Text="Usuário"  NavigateUrl="~/Adm/Usuario.aspx"/></li>
-              <li><asp:HyperLink ID="btnSair" runat="server" Text="Sair" /></li>
+              <li><asp:LinkButton ID="btnSair" runat="server" Text="Sair" OnClick="btnSair_Click"/></li>
           </ul>
         </div>
       </div>

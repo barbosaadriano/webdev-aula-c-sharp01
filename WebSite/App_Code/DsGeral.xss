@@ -8,7 +8,7 @@
   <Shapes>
     <Shape ID="DesignTable:TbCategoria" ZOrder="4" X="133" Y="45" Height="210" Width="215" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="83" />
     <Shape ID="DesignTable:TbNoticia" ZOrder="3" X="563" Y="58" Height="191" Width="201" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="140" />
-    <Shape ID="DesignTable:TbUsuario" ZOrder="2" X="356" Y="374" Height="229" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="121" />
+    <Shape ID="DesignTable:TbUsuario" ZOrder="2" X="356" Y="374" Height="248" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="121" />
   </Shapes>
   <Connectors>
     <Connector ID="DesignRelation:TbCategoria_TbNoticia" ZOrder="1" LineWidth="11">

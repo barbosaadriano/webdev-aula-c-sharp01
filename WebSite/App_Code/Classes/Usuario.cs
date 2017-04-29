@@ -46,10 +46,8 @@ public class Usuario
     {
 
     }
-    public Usuario(int usu_id)
+    private void popularDados(DsGeral.TbUsuarioDataTable tbUsuario)
     {
-        DsGeral.TbUsuarioDataTable tbUsuario = new DsGeral.TbUsuarioDataTable();
-        this.dsUsuario.FillByUsuId(tbUsuario, usu_id);
         if (tbUsuario.Rows.Count > 0)
         {
             DsGeral.TbUsuarioRow regUsuario = (DsGeral.TbUsuarioRow)tbUsuario.Rows[0];
@@ -59,6 +57,19 @@ public class Usuario
             this.usu_senha = regUsuario.usu_senha;
             this.usu_ativo = regUsuario.usu_ativo;
         }
+    }
+    public Usuario(int usu_id)
+    {
+        DsGeral.TbUsuarioDataTable tbUsuario = new DsGeral.TbUsuarioDataTable();
+        this.dsUsuario.FillByUsuId(tbUsuario, usu_id);
+        popularDados(tbUsuario);
+    }
+
+    public Usuario(string login)
+    {
+        DsGeral.TbUsuarioDataTable tbUsuario = new DsGeral.TbUsuarioDataTable();
+        dsUsuario.FillByLogin(tbUsuario, login);
+        popularDados(tbUsuario);
     }
     #endregion
     #region Manipulação dados

@@ -17,5 +17,9 @@ public class Funcoes
     {
         ScriptManager.RegisterStartupScript(pagina, pagina.GetType(), Guid.NewGuid().ToString() , "alert('" + mensagem + "');", true);
     }
+    public static bool verUsuarioLogado(Usuario usuario)
+    {
+        return ((usuario != null) && (usuario.Usu_ativo)) ;
+    }
 
 }
