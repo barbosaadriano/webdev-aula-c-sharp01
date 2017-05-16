@@ -8,8 +8,10 @@
         <h1>Usuário
         </h1>
         <p>
-            <asp:Button ID="btnListagem" runat="server" Text="Listagem" CssClass="btn-default btn" />
-            <asp:Button ID="btnCadastro" runat="server" Text="Cadastro" CssClass="btn-default btn" />
+            <asp:Button ID="btnListagem" runat="server" Text="Listagem" 
+                CssClass="btn-default btn" onclick="btnListagem_Click"  />
+            <asp:Button ID="btnCadastro" runat="server" Text="Cadastro" 
+                CssClass="btn-default btn" onclick="btnCadastro_Click" />
         </p>
         <asp:MultiView ID="multiViewUsuario" runat="server">
             <asp:View ID="tabListagem" runat="server">
@@ -22,7 +24,8 @@
                                 <asp:TextBox ID="edtBusca" CssClass="form-control" runat="server"/>
                             </div>
                             <div class="col-lg-2">
-                                <asp:LinkButton ID="btnBuscar" runat="server" CssClass="btn btn-info btn-block"  Text="Buscar">
+                                <asp:LinkButton ID="btnBuscar" runat="server" 
+                                    CssClass="btn btn-info btn-block"  Text="Buscar" onclick="btnBuscar_Click">
                                     <i class="glyphicon glyphicon-search"></i>&nbsp;Buscar
                                 </asp:LinkButton>
                              </div>
@@ -33,7 +36,9 @@
                 <div class="row">
                       <h2>Listagem</h2>
                     <div class="col-lg-12">
-                        <asp:GridView ID="grdUsuario" CssClass="table-bordered table table-striped" runat="server" AutoGenerateColumns="False" DataKeyNames="usu_id" AllowSorting="true" DataSourceID="DsUsuario">
+                        <asp:GridView ID="grdUsuario" CssClass="table-bordered table table-striped"
+                        OnSelectedIndexChanged="grdUsuario_SelectedIndexChanged"
+                         runat="server" AutoGenerateColumns="False" DataKeyNames="usu_id" AllowSorting="true" DataSourceID="DsUsuario">
                             <Columns>
                                 <asp:BoundField DataField="usu_id" HeaderText="ID" InsertVisible="False" ReadOnly="True" SortExpression="usu_id" />
                                 <asp:BoundField DataField="usu_nome" HeaderText="Nome" SortExpression="usu_nome" />
