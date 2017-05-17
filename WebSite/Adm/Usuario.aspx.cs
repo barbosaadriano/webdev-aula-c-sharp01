@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data;
 
 public partial class Adm_Usuario : System.Web.UI.Page
 {
@@ -139,6 +140,14 @@ public partial class Adm_Usuario : System.Web.UI.Page
     }
     protected void btnBuscar_Click(object sender, EventArgs e)
     {
-
+        if ( !String.IsNullOrEmpty( edtBusca.Text ) )
+        {
+           DsGeral.TbUsuarioDataTable tbUsu = new DsGeral.TbUsuarioDataTable();
+           DsGeralTableAdapters.TbUsuarioTableAdapter dsUsuario = new DsGeralTableAdapters.TbUsuarioTableAdapter();
+           dsUsuario.FillByLoginOrName(tbUsu, "%" + edtBusca.Text + "%");
+           
+           DsUsuario.DataBind();
+           grdUsuario.DataBind();
+        }
     }
 }
